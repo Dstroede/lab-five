@@ -8,12 +8,13 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function testSum(a, b) { //eslint-disable-line
-  let answer= a + b;
-  let returnMessage= 'The sum of ' + a + ' and ' + b +' is ' + answer + ' .';
-  return [answer, returnMessage];
+function sum(a, b) { //eslint-disable-line
+  let plus= a + b;
+  let returnMessage= 'The sum of ' + a + ' and ' + b +' is ' + plus + '.';
+//   console.log(plus, returnMessage);
+  return [plus, returnMessage];
 }
-testSum (4, 7);
+testSum(4, 7);
 
 // Here is the test for sum(); uncomment it to run it
 // testSum(4, 7);
@@ -29,10 +30,11 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function testMultiply(a, b) { //eslint-disable-line
-  let answer = a * b;
-  let returnMulty = 'The product of ' + a + ' and ' + b + ' is ' + answer + ' .';
-  return [answer, returnMulty];
+function multiply(a, b) { //eslint-disable-line
+  let times = a * b;
+  let returnMulty = 'The product of ' + a + ' and ' + b + ' is ' + times + '.';
+//   console.log(times, returnMulty);
+  return [times, returnMulty];
 
 }
 testMultiply(5,9);
@@ -54,9 +56,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  let add= sum(a, b);
+  let addEquat= sum(add[0], c);
+//   console.log(addEquat);
+  let multy= multiply(a, b);
+  let multyEquat= multiply(multy[0], c);
+  let returnAdd= a + ' and ' + b + ' and '+ c +' sum to ' + addEquat[0] + '.';
+//   console.log(addEquat,returnAdd);
+  let returnMulty = 'The product of ' + a + ' and ' + b + ' and '+ c +' is ' + multyEquat[0] + '.';
+  console.log(multyEquat,returnMulty);
+  return[addEquat[0], multyEquat[0], returnAdd, returnMulty];
 }
-
+testSumAndMultiply(4,7,5);
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
 
